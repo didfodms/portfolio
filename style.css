@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-overflow-style: none;
+
+  font-family: "Song Myung", serif;
+}
+
+/* font setting */
+.font-batang {
+  font-family: "Gowun Batang", serif;
+}
+.font-song {
+  font-family: "Song Myung", serif;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+
+.continer-wrap {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.container.has-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+.title {
+  width: 80%;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 400%;
+}
+.content {
+  width: 80%;
+  height: 60%;
+}
+.line {
+  border: black solid 2px;
+}
+
+/* Intro */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 150%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#intro .intro-desc > div:nth-child(1) {
+  opacity: 0.9;
+}
+#intro .intro-desc > div:nth-child(1) > span {
+}
+#intro .intro-desc > div:nth-child(2) {
+  margin-top: 4%;
+  padding-bottom: 8%;
+  font-size: 200%;
+}
+#intro .intro-desc :nth-child(2) > span {
+  font-size: 180%;
+}
+
+/* About */
+#about {
+  color: black;
+  background-color: white;
+}
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 180px;
+
+  padding-right: 10%;
+}
+#about .picture > img {
+  width: 100%;
+  border-radius: 32px;
+}
+#about .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 120%;
+
+  height: 60%;
+}
+#about .desc > div {
+  display: flex;
+  align-items: center;
+}
+#about .desc .name {
+  font-size: 180%;
+}
+#about .desc .stu-council {
+  font-size: 90%;
+}
+#about .desc .email {
+  margin-top: 4%;
+}
+#about .desc .portfolio > a {
+  text-decoration: none;
+  color: inherit;
+}
+#about .desc img {
+  width: 28px;
+  margin-right: 8px;
+}
+
+/* Skill */
+#skill {
+  color: black;
+  background-color: white;
+}
+#skill .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#skill .skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+}
+#skill .slider-wrap {
+  width: 80%;
+  height: 80%;
+}
+
+/* Project */
+#project {
+  color: yellow;
+  background-color: grey;
+}
+
+/* Activity */
+#activity {
+  color: pink;
+  background-color: green;
+}
+
+/* Contact */
+#contact {
+  color: black;
+  background-color: indianred;
+}
