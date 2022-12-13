@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /*overflow: hidden;*/
+  list-style: none;
 }
 
 ::-webkit-scrollbar {
@@ -58,6 +58,7 @@ body {
 
   font-weight: 700;
   font-size: 400%;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
 }
 .content {
   width: 80%;
@@ -90,6 +91,7 @@ body {
 }
 #intro .intro-desc :nth-child(2) > span {
   font-size: 180%;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 /* About */
@@ -106,13 +108,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 180px;
+  flex-basis: 200px;
 
   padding-right: 10%;
 }
 #about .picture > img {
   width: 100%;
-  border-radius: 32px;
+  border-radius: 16px;
+  z-index: 1;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 #about .desc {
   display: flex;
@@ -159,11 +163,37 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  font-size: 140%;
+
   height: 10%;
 }
 #skill .slider-wrap {
+  position: relative;
+  overflow: hidden;
+
   width: 80%;
   height: 80%;
+}
+#skill .slider-wrap ul.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+#skill .slider-wrap ul.slider li {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+#skill .slider > :nth-child(1) {
+  background-color: red;
+}
+#skill .slider > :nth-child(2) {
+  background-color: orange;
+}
+#skill .slider > :nth-child(3) {
+  background-color: green;
 }
 
 /* Project */
