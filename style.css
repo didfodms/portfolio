@@ -3,6 +3,22 @@
   padding: 0;
 }
 
+/* dark-mode */
+html[theme="dark-mode"] {
+  filter: invert(100%) hue-rotate(180deg);
+  transition: 0.4s;
+}
+html[theme=""] {
+  transition: 0.4s;
+}
+[theme="dark-mode"] #reyang {
+  filter: invert(100%) hue-rotate(180deg);
+  transition: 0.4s;
+}
+[theme=""] #reyang {
+  transition: 0.4s;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -58,6 +74,11 @@ body {
   font-weight: 700;
   font-size: 400%;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+
+  transition: 0.2s;
+}
+.title:hover {
+  font-size: 500%;
 }
 .content {
   width: 80%;
@@ -79,9 +100,12 @@ body {
   background-color: black;
 }
 #intro .intro-desc > div:nth-child(1) {
-  opacity: 0.9;
+  opacity: 0.7;
+  transition: 0.2s;
 }
-#intro .intro-desc > div:nth-child(1) > span {
+#intro .intro-desc > div:nth-child(1):hover {
+  opacity: 1;
+  font-size: 120%;
 }
 #intro .intro-desc > div:nth-child(2) {
   margin-top: 4%;
@@ -91,6 +115,10 @@ body {
 #intro .intro-desc :nth-child(2) > span {
   font-size: 180%;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  transition: 0.2s;
+}
+#intro .intro-desc :nth-child(2) > span:hover {
+  font-size: 220%;
 }
 
 /* About */
@@ -108,22 +136,26 @@ body {
   justify-content: center;
   align-items: center;
   flex-basis: 200px;
-
-  padding-right: 10%;
+  margin-right: 10%;
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 #about .picture > img {
   width: 100%;
   border-radius: 16px;
   z-index: 1;
-  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 #about .desc {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 120%;
-
   height: 60%;
+
+  transition: 0.2s;
+}
+#about .desc:hover {
+  font-size: 140%;
 }
 #about .desc > div {
   display: flex;
@@ -158,25 +190,60 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 4%;
+
+  /* .btn을 위한 위치 */
+  position: relative;
 }
-#skill .skills {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+#skill .skills-wrap {
+  position: relative;
+  overflow: hidden;
 
   margin: auto 4%;
-
   font-size: 140%;
-
+  width: 60%;
   height: 10%;
+
+  position: relative;
+}
+#skill .skills-wrap span,
+label {
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+#skill .skills-wrap span:hover,
+label:hover {
+  opacity: 1;
+  font-size: 120%;
+}
+#skill .skills-wrap .list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  left: 0;
+
+  /* js 제어 */
+  bottom: 0;
+  transition: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+#skill .skills-wrap .slider {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
 }
 #skill .slider-wrap {
   position: relative;
-  /*overflow: hidden;*/
+  overflow: hidden;
 
-  border: solid black 2px;
+  /*border: solid black 2px;*/
   border-radius: 8px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
 
   width: 80%;
   height: 80%;
@@ -191,6 +258,7 @@ body {
   /* js 제어 */
   bottom: 0;
   transition: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 #skill ul li {
   float: left;
@@ -205,18 +273,16 @@ body {
 }
 /* skill - btn */
 #skill .btn {
-  width: 40px;
-  height: 40px;
-
   position: absolute;
   width: 30px;
   height: auto;
-  top: 50%;
+
+  top: 60%;
   margin-top: -15px;
   line-height: 57px;
+
   cursor: pointer;
   z-index: 2;
-  user-select: none;
   opacity: 0.2;
   transition: 0.2s;
 
@@ -226,11 +292,11 @@ body {
   opacity: 0.8;
 }
 #skill .btn.next {
-  right: -50px;
+  right: 15px;
   color: white;
 }
 #skill .btn.prev {
-  left: -50px;
+  left: 15px;
   color: white;
 }
 /* slider - 1 - html, css, js */
@@ -239,6 +305,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+
+  transition: 0.4s;
+}
+#skill #first-skill > {
+  transition: 0.4s;
 }
 #skill #first-skill > div {
   display: flex;
@@ -247,6 +318,9 @@ body {
 
   border: solid rgba(0, 0, 0, 0.5) 2px;
   border-radius: 4px;
+}
+.switch input {
+  display: none;
 }
 #skill #first-skill .header {
   width: 80%;

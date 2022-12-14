@@ -32,7 +32,7 @@
         <div class="title">About</div>
         <div class="content">
           <div class="picture">
-            <img src="./images/me.png" />
+            <img id="reyang" src="./images/me.png" />
           </div>
           <div class="desc font-batang medium">
             <div class="name bold">양래은</div>
@@ -65,28 +65,46 @@
       <div id="skill" class="container has-title">
         <div class="title">Skills</div>
         <div class="content">
-          <div class="skills">
-            <span class="html">HTML</span>&emsp;<span class="css">CSS</span
-            >&emsp;<span class="js"> JavaScript</span>
+          <div class="skills-wrap">
+            <div class="list">
+              <div class="slider">
+                <span id="html">HTML</span><span id="css">CSS</span>
+                <label id="js" class="switch">
+                  <input id="switch" type="checkbox" />
+                  JavaScript
+                </label>
+              </div>
+              <div class="slider">
+                <span id="ar.js">AR.js</span>&emsp;<span id="aframe"
+                  >Aframe</span
+                >
+              </div>
+              <div class="slider">
+                <span id="java">Java</span><span id="python">Python</span
+                ><span id="opencv">OpenCV</span>
+              </div>
+            </div>
           </div>
           <div class="slider-wrap">
             <ul class="list">
               <li>
                 <div id="first-skill" class="slider">
-                  <div class="header">&lt;header&gt;</div>
-                  <div class="nav">&lt;nav&gt;</div>
-                  <div class="article">&lt;article&gt;</div>
-                  <div class="footer">&lt;footer&gt;</div>
+                  <div class="header tag">&lt;header&gt;</div>
+                  <div class="nav tag">&lt;nav&gt;</div>
+                  <div class="article tag">&lt;article&gt;</div>
+                  <div class="footer tag">&lt;footer&gt;</div>
                 </div>
               </li>
-              <li><div id="second-skill" class="slider">AR.js Aframe</div></li>
+              <li>
+                <div id="second-skill" class="slider">AR.js Aframe</div>
+              </li>
               <li>
                 <div id="else-skill" class="slider">Java, Python, OpenCV</div>
               </li>
             </ul>
-            <img class="btn next" src="./images/right-arrow.png" />
-            <img class="btn prev" src="./images/left-arrow.png" />
           </div>
+          <img class="btn next" src="./images/right-arrow.png" />
+          <img class="btn prev" src="./images/left-arrow.png" />
         </div>
       </div>
 
