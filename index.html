@@ -15,9 +15,8 @@
       type="text/css"
       href="http://localhost:5500/style.css"
     />
-    <!-- 잠깐 막았습니다 ㅎㅎ
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    --></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
   <body>
     <div class="container-wrap">
       <!-- Intro page -->
@@ -67,16 +66,26 @@
         <div class="title">Skills</div>
         <div class="content">
           <div class="skills">
-            <span class="html"
-              >HTML&emsp;<span class="css">CSS&emsp;</span ><span class="js">
-                 JavaScript</span>
+            <span class="html">HTML</span>&emsp;<span class="css">CSS</span
+            >&emsp;<span class="js"> JavaScript</span>
           </div>
           <div class="slider-wrap">
-            <ul class="list slider">
-              <li><div class="first-skill">HTML, CSS, JS</div></li>
-              <li><div class="second-skill">AR.js Aframe</div></li>
-              <li><div class="else">Java, Python, OpenCV</div></li>
+            <ul class="list">
+              <li>
+                <div id="first-skill" class="slider">
+                  <div class="header">&lt;header&gt;</div>
+                  <div class="nav">&lt;nav&gt;</div>
+                  <div class="article">&lt;article&gt;</div>
+                  <div class="footer">&lt;footer&gt;</div>
+                </div>
+              </li>
+              <li><div id="second-skill" class="slider">AR.js Aframe</div></li>
+              <li>
+                <div id="else-skill" class="slider">Java, Python, OpenCV</div>
+              </li>
             </ul>
+            <img class="btn next" src="./images/right-arrow.png" />
+            <img class="btn prev" src="./images/left-arrow.png" />
           </div>
         </div>
       </div>
@@ -101,4 +110,5 @@
     --></div>
   </body>
   <script type="text/javascript" src="./scripts/scroll.js"></script>
+  <script type="text/javascript" src="./scripts/skillSlider.js"></script>
 </html>
