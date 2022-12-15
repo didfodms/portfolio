@@ -1,47 +1,26 @@
 const skillEl = document.querySelector("#skill");
 const skillsWrapEl = skillEl.querySelector(".skills-wrap");
-const sliderWrapEl = skillEl.querySelector(".slider-wrap");
+const skillSliderWrapEl = skillEl.querySelector(".slider-wrap");
 
 const skillSliderEl = skillsWrapEl.querySelectorAll(".slider");
-const sliderEl = sliderWrapEl.querySelectorAll(".slider");
+const sliderEl = skillSliderWrapEl.querySelectorAll(".slider");
 
 const skillSliderListEl = skillsWrapEl.querySelector(".list");
-const sliderListEl = sliderWrapEl.querySelector(".list");
-
-const nextBtnEl = skillEl.querySelector(".btn.next");
-const prevBtnEl = skillEl.querySelector(".btn.prev");
-
-let currentIndex = 0;
-
-/* button */
-nextBtnEl.addEventListener("click", function (event) {
-  currentIndex++;
-  currentIndex %= sliderEl.length;
-  skillSliderListEl.style.bottom = `${currentIndex * 100}%`;
-  sliderListEl.style.bottom = `${currentIndex * 100}%`;
-
-  event.stopPropagation();
-});
-
-prevBtnEl.addEventListener("click", function (event) {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = sliderEl.length - 1;
-  }
-  skillSliderListEl.style.bottom = `${currentIndex * 100}%`;
-  sliderListEl.style.bottom = `${currentIndex * 100}%`;
-
-  event.stopPropagation();
-});
+const sliderListEl = skillSliderWrapEl.querySelector(".list");
 
 /* html, css, js */
 const firstSkillEl = skillEl.querySelector("#first-skill");
+
+/* prevent slide */
+firstSkillEl.addEventListener("click", function (event) {
+  event.stopPropagation();
+});
+
 const htmlEl = skillEl.querySelector("#html");
 const cssEl = skillEl.querySelector("#css");
 const jsEl = skillEl.querySelector("#js");
 
 const tagEl = skillEl.querySelectorAll(".tag");
-console.log(tagEl);
 
 htmlEl.addEventListener("click", function (event) {
   firstSkillEl.style.backgroundColor = ``;
@@ -78,7 +57,6 @@ cssEl.addEventListener("click", function (event) {
 });
 
 jsEl.addEventListener("click", function (event) {
-  console.log(event.target.checked);
   //documentElement == html
   document.documentElement.setAttribute(
     "theme",
@@ -91,7 +69,3 @@ jsEl.addEventListener("click", function (event) {
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-
-/* ar.js, aframe */
-const arJsEl = skillEl.querySelector("#ar.js");
-const aframeEl = skillEl.querySelector("#aframe");
