@@ -26,6 +26,13 @@ html[theme=""] {
 [theme=""] #project .slider-wrap .list {
   transition: 0.4s;
 }
+[theme="dark-mode"] #activity img:not(.cover) {
+  filter: invert(100%) hue-rotate(180deg);
+  transition: 0.4s;
+}
+[theme=""] #activity img:not(.cover) {
+  transition: 0.4s;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -251,7 +258,7 @@ label:hover {
   overflow: hidden;
 
   border: solid black 2px;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
 
   width: 80%;
@@ -397,8 +404,6 @@ label:hover {
   font-size: 140%;
   width: 80%;
   height: 10%;
-
-  position: relative;
 }
 #project .projects-wrap span {
   display: flex;
@@ -513,31 +518,125 @@ label:hover {
 
 /* Activity */
 #activity {
-  color: pink;
-  background-color: green;
-
-  overflow: auto;
+  color: black;
+  background-color: white;
+}
+#activity .title {
+  padding-bottom: 12px;
 }
 #activity .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 4%;
-
-  border: solid black 2px;
-
-  overflow: auto;
 }
-#activity .content div {
-  width: 300px;
+#activity .content .test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 25%;
+  height: 70%;
+
+  font-size: 140%;
+  opacity: 0.7;
+
+  transition: 0.4s;
+}
+#activity .content .test:hover {
+  width: 30%;
+  height: 100%;
+  opacity: 1;
+  font-size: 160%;
+}
+#activity .test .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4%;
+
+  width: 100%;
+  height: 10%;
+
+  transition: 0.2s;
+}
+#activity .test .name:hover {
+  font-size: 120%;
+}
+#activity .test .slider-wrap:not(.slider.letter) {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  /**/
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  text-align: center;
+  font-size: 140%;
+}
+#activity .slider-wrap .list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  left: 0;
+
+  /* js 제어 */
+  bottom: 0;
+  transition: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+#activity .slider-wrap .slider {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+#activity .slider-wrap .slider .cover {
+  width: 50%;
+  height: auto;
+
+  transition: 0.4s;
+}
+#activity .slider-wrap .slider img {
+  width: 100%;
   height: 100%;
 
-  background-color: tan;
-
-  border: solid black 2px;
+  transition: 0.4s;
 }
+#activity .slider-wrap .slider div:not(.slider.letter >) {
+  width: 100%;
+  height: 100%;
 
+  transition: 0.4s;
+}
+#activity .slider-wrap .slider div:not(.slider.letter >):hover {
+  width: 300px;
+  height: auto;
+
+  position: absolute;
+
+  transition: 0.4s;
+}
+#activity .slider-wrap .slider.letter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 60%;
+
+  transition: 0.4s;
+}
+#activity .slider-wrap .slider.letter:hover {
+  justify-content: space-evenly;
+
+  transition: 0.4s;
+}
 /* Contact */
 #contact {
   color: black;
