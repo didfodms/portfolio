@@ -635,3 +635,16 @@ label:hover {
   color: white;
   background-color: black;
 }
+#end .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#end span {
+  font-size: 180%;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  transition: 0.2s;
+}
+#intro span:hover {
+  font-size: 220%;
+}
