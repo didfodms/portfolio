@@ -631,7 +631,7 @@ label:hover {
   transition: 0.4s;
 }
 /* Contact */
-#contact {
-  color: black;
-  background-color: indianred;
+#end {
+  color: white;
+  background-color: black;
 }
