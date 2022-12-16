@@ -508,13 +508,6 @@ label:hover {
 
   transition: 0.4s;
 }
-/* slider - 2 - ar.js, aframe */
-#project #first-project {
-  background-color: orange;
-}
-#project #third-project {
-  background-color: red;
-}
 
 /* Activity */
 #activity {
