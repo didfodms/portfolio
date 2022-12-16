@@ -635,16 +635,16 @@ label:hover {
   color: white;
   background-color: black;
 }
-#end .container {
+#end .end-desc {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#end span {
+#end .end-desc span {
   font-size: 180%;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   transition: 0.2s;
 }
-#intro span:hover {
+#end .end-desc span:hover {
   font-size: 220%;
 }
