@@ -646,10 +646,10 @@ label:hover {
   align-items: center;
 }
 #end .end-desc span {
-  font-size: 330%;
+  font-size: 350%;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   transition: 0.2s;
 }
 #end .end-desc span:hover {
-  font-size: 360%;
+  font-size: 400%;
 }
