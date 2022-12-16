@@ -630,7 +630,8 @@ label:hover {
 
   transition: 0.4s;
 }
-/* Contact */
+
+/* end */
 #end {
   color: white;
   background-color: black;
@@ -641,10 +642,10 @@ label:hover {
   align-items: center;
 }
 #end .end-desc span {
-  font-size: 180%;
+  font-size: 270%;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
   transition: 0.2s;
 }
 #end .end-desc span:hover {
-  font-size: 220%;
+  font-size: 300%;
 }
